@@ -1,0 +1,116 @@
+# 📱 Meu Feed - Flutter
+
+Aplicativo desenvolvido em **Flutter** utilizando a linguagem **Dart**, com o objetivo de criar uma tela de feed semelhante às redes sociais.
+
+O aplicativo apresenta uma lista de publicações com imagens, informações do usuário, quantidade de curtidas e botões para curtir, comentar e compartilhar.
+
+## 🚀 Funcionalidades
+
+- Exibição de um feed de publicações;
+- Exibição de imagens;
+- Identificação do usuário da publicação;
+- Sistema de curtidas;
+- Contador de curtidas;
+- Botão de comentário;
+- Botão de compartilhamento;
+- Alteração do ícone de curtida quando o usuário toca no botão;
+- Interface construída com widgets do Flutter.
+
+## 🛠️ Tecnologias utilizadas
+
+- **Flutter**
+- **Dart**
+- **Material Design**
+
+## 📂 Estrutura das imagens
+
+As imagens utilizadas no feed devem estar organizadas na pasta `imagens` do projeto:
+
+```text
+imagens/
+├── i257652.jpeg
+├── elefante.jpg
+└── paisagemjpg.jpg
+```
+
+## 🧩 Principais componentes
+
+### `MaterialApp`
+
+É utilizado para configurar o aplicativo e definir a tela inicial.
+
+### `Scaffold`
+
+Cria a estrutura principal da tela, contendo a barra superior e o conteúdo do aplicativo.
+
+### `AppBar`
+
+Exibe o título **"Meu Feed"** na parte superior da tela.
+
+### `ListView.builder`
+
+Cria dinamicamente uma lista de publicações utilizando as imagens armazenadas na lista `fotos`.
+
+### `Image.network`
+
+Responsável por exibir as imagens das publicações.
+
+### `IconButton`
+
+Utilizado para criar os botões de:
+
+- ❤️ Curtir
+- 💬 Comentar
+- 📤 Compartilhar
+
+## ❤️ Sistema de curtidas
+
+O aplicativo possui um sistema simples de curtidas.
+
+Quando o usuário toca no botão de coração:
+
+- O ícone muda para um coração preenchido;
+- A quantidade de curtidas aumenta em 1;
+- Ao tocar novamente, a curtida é removida;
+- A quantidade de curtidas diminui em 1.
+
+Essa funcionalidade utiliza o método `setState()` para atualizar a interface.
+
+## 💬 Comentários e compartilhamento
+
+Os botões de comentário e compartilhamento ainda não possuem uma funcionalidade completa.
+
+Ao serem pressionados, eles exibem uma mensagem utilizando um `SnackBar`:
+
+```text
+Botão comentar
+Botão compartilhar
+```
+
+## ▶️ Como executar o projeto
+
+1. Instale o **Flutter** e configure o ambiente de desenvolvimento.
+2. Crie ou abra o projeto no **Android Studio**, **IntelliJ IDEA** ou **VS Code**.
+3. Coloque a pasta `imagens` dentro do diretório do projeto.
+4. Verifique se os arquivos de imagem possuem os mesmos nomes utilizados no código.
+5. Execute o comando:
+
+```bash
+flutter pub get
+```
+
+6. Inicie o aplicativo com:
+
+```bash
+flutter run
+```
+
+## 📌 Observação
+
+As imagens estão sendo carregadas através de `Image.network()`. Portanto, para utilizar imagens armazenadas localmente na pasta `imagens`, o código deverá utilizar `Image.asset()` e as imagens deverão ser configuradas no arquivo `pubspec.yaml`.
+
+## 👩‍💻 Desenvolvido por
+
+**Thais Costa Patto de Souza**
+
+Projeto desenvolvido para estudos de **Programação de Dispositivos Móveis com Flutter e Dart**.
